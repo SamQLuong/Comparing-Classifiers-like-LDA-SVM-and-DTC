@@ -26,7 +26,7 @@ Then, the assignment asks us to project a 3D plot of three V modes. I would need
 
 Next, I build a function that outputs the training and testing values of X and Y based on the digits we are looking for. The first function, classifier2, separates two digits in the MNIST data set, and the second function, classifier3, separate three digits. The following code is posted in Figure 1.  We can see that I filtered the digits with the digits we need to separate and split the data into training and testing data. The number of test sizes is set to 0.3 which means that 30% of the data is used for testing. In the end, the function returns the X_training, y_training, X_testing, and y_testing. 
 
-'''python
+```python
 
 def classifer2(digit1, digit2):
     y1 = Y.astype(int)
@@ -44,7 +44,7 @@ def classifer3(digit1, digit2, digit3):
     
     return X_train, X_test, y_train, y_test
     
-'''
+```
 
 The assignment asks us to separate every two digits in the MNIST data set, therefore, there should be 45 combinations which I created using an array of pairs shown in Figure 2. Then, I used the LDA, for loops, and the classifier2 function to create an array of accuracy scores where the index matches the position of the combination array of every two digits. I did the same process for both the DTC and SVM. 
 
