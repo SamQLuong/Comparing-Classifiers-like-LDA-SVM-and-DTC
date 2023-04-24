@@ -99,12 +99,33 @@ In Figure 4, we can see the 3D plot of the three V-mode projections. The graph s
 
 **Figure 4**: The 3D plot of the V-mode projection of column 2, 3, and 5. 
 
-I timed the classifiers to see how long each classifier would take to find the accuracy score for each combination of the two digits. The LDA took about **81.5 seconds** to complete while the DTC took about **73 seconds**. However, the SVM took the longest time to complete which was about **196 seconds**. Now, the easiest digits to separate based on the LDA classifier was the 6 and 7 digit which makes sense because the 6 and 7 are clearly different. However, the hardest digits to separate were 3 and 5 because the digits are similar in shape. The score for 6 and 7 was about **99.5%** for LDA, and the score for 3 and 5 was about **94.8%**. Comparing the score to the other classifiers, the DTC score for 6 and 7 was **99.4%**, and for 3 and 5 was **95.4%**. The SVM scoring for 6 and 7 was **100%** while the 3 and 5 were **99.2%**. We can see that the SVM has the highest score for the hardest and easiest digits while the LDA and DTC were similar in percentages but the DTC took the shortest amount of time to compute. 
+I timed the classifiers to see how long each classifier would take to find the accuracy score for each combination of the two digits. The LDA took about **81 seconds** to complete while the DTC took about **66 seconds**. However, the SVM took the longest time to complete which was about **203 seconds**. Now, the easiest digits to separate based on the LDA classifier was the 6 and 7 digit which makes sense because the 6 and 7 are clearly different. However, the hardest digits to separate were 3 and 5 because the digits are similar in shape. The score for 6 and 7 was about **99.5%** for LDA, and the score for 3 and 5 was about **94.8%**. Comparing the score to the other classifiers, the DTC score for 6 and 7 was **99.4%**, and for 3 and 5 was **95.4%**. The SVM scoring for 6 and 7 was **100%** while the 3 and 5 were **99.2%**. We can see that the SVM has the highest score for the hardest and easiest digits while the LDA and DTC were similar in percentages but the DTC took the shortest amount of time to compute. 
+The following code result in figure 5 is the results from performing all three classifiers
+```
+Max Index:  39
+Min Index:  25
+DTC Max:  0.9924723594448365
+SVM Max:  1.0
+DTC Min:  0.9578895219222194
+SVM Min:  0.9920733217735943
+LDA Max Score:  0.9955304634203717
+Easiest digits to Separate:  [6, 7]
+LDA Min Score:  0.9484765915283626
+Hardest digits to Separate:  [3, 5]
+```
+```
+Length of Time for LDA:  80.85871005058289
+```
+```
+Length of Time for DTC:  66.19771194458008
+```
+```
+Length of Time for SVM:  203.96178460121155
+```
+Finally, in Figure 6, we can see the LDA graphs for both the hardest and easiest digits to separate. The yellow portion of the graph is the added digit so that we can graph the LDA in a 2D plot. Therefore, ignoring the yellow portion, we can see that the 6 and 7 digits have a small gap between the two clumps of data. Therefore, the accuracy score is higher because the LDA was able to separate the clumps easily. On the other hand, we can see that the 3 and 5 have a few data points clumped together which would make the classifier have a hard time separating the digits. 
 
-Finally, in Figure 5, we can see the LDA graphs for both the hardest and easiest digits to separate. The yellow portion of the graph is the added digit so that we can graph the LDA in a 2D plot. Therefore, ignoring the yellow portion, we can see that the 6 and 7 digits have a small gap between the two clumps of data. Therefore, the accuracy score is higher because the LDA was able to separate the clumps easily. On the other hand, we can see that the 3 and 5 have a few data points clumped together which would make the classifier have a hard time separating the digits. 
-
-![Figure 5 part 1](https://github.com/SamQLuong/Comparing-Classifiers-like-LDA-SVM-and-DTC/blob/main/LDA%20Easiest%20Separation.png)
-![Figure 5 part 2](https://github.com/SamQLuong/Comparing-Classifiers-like-LDA-SVM-and-DTC/blob/main/LDA%20Hardest%20Separation.png)
+![Figure 6 part 1](https://github.com/SamQLuong/Comparing-Classifiers-like-LDA-SVM-and-DTC/blob/main/LDA%20Easiest%20Separation.png)
+![Figure 6 part 2](https://github.com/SamQLuong/Comparing-Classifiers-like-LDA-SVM-and-DTC/blob/main/LDA%20Hardest%20Separation.png)
 
 **Figure 5**: The top graph is the easiest digits to separate where digit 6 and 7 and an added 8 for the 2D plot is shown. The bottom graph is the hardest digits to separate where the digit 3 and 5 and an added 8 for the 2D plot is shown. 
 
