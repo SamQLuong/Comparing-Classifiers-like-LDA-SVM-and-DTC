@@ -79,7 +79,7 @@ scoreArrayDTC = []
 ```python
 scoreArraySVM = []
 ```
-**Figure 2**: The array of combination of two digits
+**Figure 2**: The array of combination of two digits and the array of each classifier scores
 
 Afterward, we can start comparing the easiest digits to separate and the hardest digits to separate. I used the np.max() code and the np.min() to find the easiest and hardest digits to separate since the output will be the percentage of accuracy. I would print the accuracy score and the two digits that were easier and harder to separate. The results will be listed in the results portion of the assignment. 
 
