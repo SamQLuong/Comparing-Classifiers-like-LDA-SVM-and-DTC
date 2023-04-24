@@ -56,7 +56,7 @@ def classifer3(digit1, digit2, digit3):
 ```
 **Figure 1**: Python code for the classifier for two digits and three digits that return training and testing data.
 
-The assignment asks us to separate every two digits in the MNIST data set, therefore, there should be 45 combinations which I created using an array of pairs shown in Figure 2. Then, I used the LDA, for loops, and the classifier2 function to create an array of accuracy scores where the index matches the position of the combination array of every two digits. I did the same process for both the DTC and SVM. 
+The assignment asks us to separate every two digits in the MNIST data set, therefore, there should be 45 combinations which I created using an array of pairs shown in Figure 2. Also, each classifier as an array of accuaracy scores shown in Figure 2. Then, I used the LDA, for loops, and the classifier2 function to create an array of accuracy scores where the index matches the position of the combination array of every two digits. I did the same process for both the DTC and SVM. 
 
 ```python
 # creates an array of different combinations of two digits
@@ -69,6 +69,15 @@ comb = [[0,1],[0,2],[0,3],[0,4],[0,5],[0,6],[0,7],[0,8],[0,9],
         [6,7],[6,8],[6,9],
         [7,8],[7,9],
         [8,9]]
+```
+```python
+scoreArrayLDA = []
+```
+```python
+scoreArrayDTC = []
+```
+```python
+scoreArraySVM = []
 ```
 **Figure 2**: The array of combination of two digits
 
